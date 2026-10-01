@@ -2,7 +2,7 @@ import { convertToExcalidrawElements } from "@excalidraw/excalidraw";
 import type { DiagramDSL, DiagramEdge, DiagramNode } from "@/types/diagram-schema";
 import { computeLayout, type LayoutBox } from "./layout";
 
-type ExcalidrawSkeleton = Parameters<typeof convertToExcalidrawElements>[0][number];
+type ExcalidrawSkeleton = NonNullable<Parameters<typeof convertToExcalidrawElements>[0]>[number];
 export type ExcalidrawElements = ReturnType<typeof convertToExcalidrawElements>;
 
 interface Point {
